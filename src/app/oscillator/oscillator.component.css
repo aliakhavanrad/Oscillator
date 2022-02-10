@@ -1,3 +1,11 @@
+.header{
+  background-color: black;
+  color: white;
+  padding: 30px 0px;
+
+}
+
+
 .slider-wrapper {
     display: inline-block;
     width: 40px;

@@ -1,12 +1,15 @@
+<div class="header text-center">
+    <h1 class="align-middle">Oscillator</h1>        
+</div>
+
 <div class="container">
-    <div class="jumbotron">
-        <h1>Oscillator</h1>
-    </div>
+   
+
 <hr>
 
 <div class="row">
     <div class="form-group">
-        <label for="frequency">Fundamental Frequency</label>
+        <label for="frequency"><b>Fundamental Frequency</b></label>
 
         <input type="number" id="frequency" class="form-control" min="20" max="2000" value="220"> 
     </div>    
@@ -18,7 +21,7 @@
 
     <div class="col-md-6">
         <div class="form-group">
-            <label for="attack">Attack</label>
+            <label for="attack"><b>Attack</b> </label>
             <input type="number" id="attack" class="form-control" min="0" value="0.01">
         </div>
             
@@ -26,7 +29,7 @@
     
     <div class="col-md-6">
         <div class="form-group">
-            <label for="decay">Decay</label>
+            <label for="decay"><b>Decay</b> </label>
             <input type="number" id="decay" class="form-control" min="0" value="0.05">
         </div>
     
@@ -36,7 +39,7 @@
         
     <div class="col-md-6">
         <div class="form-group">
-            <label for="sustain">Sustain</label>
+            <label for="sustain"><b>Sustain</b> </label>
             <input type="number" id="sustain" class="form-control" min="0" value="0">
         </div>
     
@@ -46,7 +49,7 @@
     <div class="col-md-6">
                 
     <div class="form-group">
-        <label for="release">Release</label>
+        <label for="release"><b>Release</b> </label>
         <input type="number" id="release" class="form-control" min="0" value="0.3">
     </div>
 
@@ -58,7 +61,7 @@
 <h4>Harmonics</h4>
 <button class="btn btn-primary" (click)="onResetHarmonics()">Reset</button>
 <div class="row" id="slidersContainer">
-        <div class="col-lg-1" *ngFor="let item of harmonicsArray; let i = index">
+        <div class="col-lg-1 col-md-3 col-sm-4" *ngFor="let item of harmonicsArray; let i = index">
         <h3>H {{i + 1}}</h3>
         <div class="slider-wrapper">
             <input type="range"
@@ -76,7 +79,7 @@
 <br>
 <div class="row">
 
-    <div>
+    <div class="col-md-6">
         <button class="btn btn-success btn-lg" (click)="onStart()">Play</button>
     </div>
 
@@ -85,6 +88,7 @@
 </div>
 
 
+<br>
 
 
 
