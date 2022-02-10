@@ -28,7 +28,7 @@ export class OscillatorComponent implements OnInit {
     return document.getElementById(id);
   }
 
-  onStart(slidersContainer:HTMLElement){
+  onStart(){
     
     this.fundamentalFreq = parseInt((this.el("frequency") as HTMLInputElement).value);
     this.attackTime = parseFloat((this.el("attack") as HTMLInputElement).value);
@@ -39,6 +39,8 @@ export class OscillatorComponent implements OnInit {
     let sliders = new Array();
 
     let i = 1;
+
+    let slidersContainer = this.el("slidersContainer");
 
     for(let child of Array.from(slidersContainer.children)){
       sliders.push({harmonic: i++,value:child.getElementsByTagName("input")[0].value});
@@ -93,5 +95,13 @@ export class OscillatorComponent implements OnInit {
 
   }
 
+  onResetHarmonics(){
+    let slidersContainer = this.el("slidersContainer");
+    
+    for(let child of Array.from(slidersContainer.children)){
 
+      child.getElementsByTagName("input")[0].value = "0";
+      
+    }
+  }
 }
