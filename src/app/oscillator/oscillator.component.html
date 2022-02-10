@@ -1,0 +1,89 @@
+<div class="container">
+    <div class="jumbotron">
+        <h1>Oscillator</h1>
+    </div>
+<hr>
+
+<div class="row">
+    <div class="form-group">
+        <label for="frequency">Fundamental Frequency</label>
+
+        <input type="number" id="frequency" class="form-control" min="20" max="2000" value="55"> 
+    </div>    
+</div>
+
+<hr>
+<div class="row">
+    <h4>ADSR Envelope</h4>
+
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="attack">Attack</label>
+            <input type="number" id="attack" class="form-control" min="0" step="0.1">
+        </div>
+            
+    </div>
+    
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="decay">Decay</label>
+            <input type="number" id="decay" class="form-control" min="0" step="0.1">
+        </div>
+    
+    </div>
+    
+
+        
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="sustain">Sustain</label>
+            <input type="number" id="sustain" class="form-control" min="0" step="0.1">
+        </div>
+    
+    </div>
+
+
+    <div class="col-md-6">
+                
+    <div class="form-group">
+        <label for="release">Release</label>
+        <input type="number" id="release" class="form-control" min="0" step="0.1">
+    </div>
+
+    </div>
+
+</div>
+
+<hr>
+<h4>Harmonics</h4>
+<div class="row" #slidersContainer>
+        <div class="col-lg-1" *ngFor="let item of harmonicsArray; let i = index">
+        <h3>H {{i + 1}}</h3>
+        <div class="slider-wrapper">
+            <input type="range"
+                orient="vertical" 
+                [id]="i + 1"
+                step="0.01" 
+                value="0" 
+                min="0" 
+            max="1">
+        </div>
+        </div>         
+    
+</div>
+
+<br>
+<div class="row">
+
+    <div>
+        <button class="btn btn-success btn-lg" (click)="onStart(slidersContainer)">Play</button>
+    </div>
+
+</div>
+
+</div>
+
+
+
+
+
