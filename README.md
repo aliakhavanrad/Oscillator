@@ -1,7 +1,7 @@
 # Oscillator
 
 ## Online Demo
-- https://aliakhavanrad.github.io/
+- https://aliakhavanrad.github.io/Oscillator/
 
 ## Description
 Use this Oscillator to create sounds with any frequency and any ADSR (Attack, Decay, Sustain and Release) values.
